@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b07gwu0t57y7c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_raywg"]
+size = Vector2(1796, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glj3d"]
+size = Vector2(41.5, 1210)
+
+[node name="World" type="Node2D"]
+
+[node name="sceneFloor" type="Node2D" parent="."]
+
+[node name="floor" type="CollisionShape2D" parent="sceneFloor"]
+position = Vector2(602, 640)
+shape = SubResource("RectangleShape2D_raywg")
+debug_color = Color(1, 1, 1, 0.42)
+
+[node name="sceneWalls" type="Node2D" parent="."]
+position = Vector2(-92, -281)
+
+[node name="walls" type="CollisionShape2D" parent="sceneWalls"]
+position = Vector2(89, 721)
+shape = SubResource("RectangleShape2D_glj3d")
+debug_color = Color(1, 1, 1, 0.42)
+
+[node name="walls2" type="CollisionShape2D" parent="sceneWalls"]
+position = Vector2(1254, 716)
+shape = SubResource("RectangleShape2D_glj3d")
+debug_color = Color(1, 1, 1, 0.42)
